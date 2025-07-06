@@ -977,6 +977,22 @@ require('lazy').setup({
       'kiddos/gemini.nvim',
       opts = {},
     },
+
+    --
+    -- Phpactor
+    {
+      'gbprod/phpactor.nvim',
+      ft = 'php',
+      dependencies = {
+        'nvim-lua/plenary.nvim',
+        'neovim/nvim-lspconfig',
+        -- If the update/install notification doesn't show properly,
+        -- you should also add here UI plugins like "folke/noice.nvim" or "stevearc/dressing.nvim"
+      },
+      opts = {
+        -- you're options goes here
+      },
+    },
   },
 
   -- The following comments only work if you have downloaded the kickstart repo, not just copy pasted the
