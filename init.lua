@@ -965,8 +965,17 @@ require('lazy').setup({
     --    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
 
     -- GitHub Copilot
+    -- {
+    --  'git@github.com:github/copilot.vim.git',
+    --  opts = {
+    --    disable = true,
+    --  },
+    --},
+    --
+    -- Gemini Plugin
     {
-      'git@github.com:github/copilot.vim.git',
+      'kiddos/gemini.nvim',
+      opts = {},
     },
   },
 
