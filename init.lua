@@ -995,6 +995,27 @@ require('lazy').setup({
     },
   },
 
+  -- FileManager -- tree structure
+  {
+    'nvim-neo-tree/neo-tree.nvim',
+    branch = 'v3.x',
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+      'nvim-tree/nvim-web-devicons', -- not strictly required, but recommended
+      'MunifTanjim/nui.nvim',
+      -- Optional image support for file preview: See `# Preview Mode` for more information.
+      -- {"3rd/image.nvim", opts = {}},
+      -- OR use snacks.nvim's image module:
+      -- "folke/snacks.nvim",
+    },
+    lazy = false, -- neo-tree will lazily load itself
+    ---@module "neo-tree"
+    ---@type neotree.Config?
+    opts = {
+      -- add options here
+    },
+  },
+
   -- The following comments only work if you have downloaded the kickstart repo, not just copy pasted the
   -- init.lua. If you want these files, they are in the repository, so you can just download them and
   -- place them in the correct locations.
