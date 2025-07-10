@@ -1,6 +1,6 @@
 --[[
 
-=====================================================================
+====================================================================
 ==================== READ THIS BEFORE CONTINUING ====================
 =====================================================================
 ========                                    .-----.          ========
@@ -1163,6 +1163,30 @@ require('lazy').setup({
     },
   },
 })
+
+-- Neo-tree keymaps
+-- It will also reveal the current file in the tree.
+vim.keymap.set('n', '\\', '<Cmd>Neotree toggle<CR>', { desc = 'NeoTree toggle' })
+
+-- Open a floating file explorer
+vim.keymap.set('n', '<leader>e', '<Cmd>Neotree float<CR>', { desc = 'NeoTree float' })
+
+-- Reveal the current file in the file explorer
+vim.keymap.set('n', '|', '<Cmd>Neotree reveal<CR>', { desc = 'NeoTree reveal in file explorer' })
+
+-- Open a floating file explorer with the git status source
+-- vim.keymap.set('n', '<leader>s', '<Cmd>Neotree float git_status<CR>', { desc = 'NeoTree git status' })
+
+-- Open a floating file explorer with the buffers source
+-- vim.keymap.set('n', '<leader>b', '<Cmd>Neotree float buffers<CR>', { desc = 'NeoTree buffers' })
+
+-- Make arrow keys behave like hjkl in Normal and Visual modes
+-- This is useful for easier navigation without moving your hand.
+-- print 'Remapping arrow keys to behave like hjkl'
+vim.keymap.set({ 'n', 'v' }, '<Left>', 'h', { desc = 'Move left' })
+vim.keymap.set({ 'n', 'v' }, '<Down>', 'j', { desc = 'Move down' })
+vim.keymap.set({ 'n', 'v' }, '<Up>', 'k', { desc = 'Move up' })
+vim.keymap.set({ 'n', 'v' }, '<Right>', 'l', { desc = 'Move right' })
 
 require('lualine').setup()
 
